@@ -1,0 +1,39 @@
+---
+title: "Data Import"
+output: html_document
+---
+```{r}
+library(tidyverse)
+```
+
+Import our first dataset 
+```{r}
+litters_df =
+  read_csv(file= "data_import_examples/FAS_litters.csv")
+
+litters_df = janitor:: clean_names(litters_df)
+```
+Import your second dataset 
+```{r}
+pups_df =
+  read_csv( "data_import_examples/FAS_pups.csv", skip = 3)
+pups_df = janitor:: clean_names(pups_df)
+```
+
+
+### Look at the data 
+
+```{r}
+litters_df
+pups_df
+```
+
+Head or tail 
+```{r}
+head(litters_df, 20)
+tail(pups_df, 5)
+```
+
+
+
+
