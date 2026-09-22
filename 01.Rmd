@@ -33,6 +33,35 @@ Head or tail
 head(litters_df, 20)
 tail(pups_df, 5)
 ```
+```{r}
+skimr::skim(pups_df)
+```
+```{r}
+litters_df = 
+    read_csv(
+        file = "data_import_examples/FAS_litters.csv",
+        na = c(".", "NA", ".")
+        )
+litters_df = janitor:: clean_names(litters_df)
+```
+
+```{r}
+pups_df =
+  read_csv(
+    file ="data_import_examples/FAS_pups.csv", skip = 3,
+    na = c(".", "NA", ".")
+        )
+pups_df = janitor:: clean_names(pups_df)
+```
+
+## Oh excel...
+
+
+
+
+
+
+
 
 
 
